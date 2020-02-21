@@ -12,15 +12,15 @@ namespace Assignment2_CT_Spring2020
             //// Write your code to print range r here
             //Console.WriteLine("[{0}]", string.Join(", ", r));
             //Console.WriteLine();
-            Console.WriteLine("Question 2");
-            string s = "University of South Florida";
-            string rs = StringReverse(s);
-            Console.WriteLine(rs);
-            Console.WriteLine();
-            //Console.WriteLine("Question 3");
-            //int[] l2 = new int[] { 2, 2, 3, 5, 6 };
-            //int sum = MinimumSum(l2);
-            //Console.WriteLine(sum);
+            //Console.WriteLine("Question 2");
+            //string s = "University of South Florida";
+            //string rs = StringReverse(s);
+            //Console.WriteLine(rs);
+            //Console.WriteLine();
+            Console.WriteLine("Question 3");
+            int[] l2 = new int[] { 2, 2, 3, 5, 6 };
+            int sum = MinimumSum(l2);
+            Console.WriteLine(sum);
             //Console.WriteLine("Question 4");
             //string s2 = "Dell";
             //string sortedString = FreqSort(s2);
@@ -55,7 +55,7 @@ namespace Assignment2_CT_Spring2020
 
         public static int[] TargetRange(int[] l1, int t)
         {
-            
+
             try
             {
                 //Write your code here;
@@ -71,7 +71,7 @@ namespace Assignment2_CT_Spring2020
                 int countQue1 = 0;
                 for (int indexQue1 = 0; indexQue1 < l1.Length; indexQue1++)
                 {
-                    if (l1[indexQue1] == t )
+                    if (l1[indexQue1] == t)
                     {
                         arrayQue1[countQue1] = indexQue1;
                         countQue1++;
@@ -87,7 +87,7 @@ namespace Assignment2_CT_Spring2020
             {
                 throw;
             }
-            
+
         }
 
         public static string StringReverse(string s)
@@ -125,6 +125,24 @@ namespace Assignment2_CT_Spring2020
                 throw;
             }
         }
+
+        public static int MinimumSum(int[] l2)
+        {
+            try
+            {
+                //Write your code here;
+                int sumQ3 = 0;
+                for (int indexQ3 = 0; indexQ3 < l2.Length; indexQ3++)
+                {
+                    sumQ3 += l2[indexQ3];
+                }
+                return sumQ3;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         public static void DisplayArray(int[] a)
         {
             foreach (int n in a)
@@ -132,20 +150,9 @@ namespace Assignment2_CT_Spring2020
                 Console.Write(n + " ");
             }
         }
-        
-        
-        public static int MinimumSum(int[] l2)
-        {
-            try
-            {
-                //Write your code here;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            return 0;
-        }
+
+
+       
         public static string FreqSort(string s2)
         {
             try
@@ -190,7 +197,7 @@ namespace Assignment2_CT_Spring2020
             }
             catch (Exception)
             {
-             throw;
+                throw;
             }
             return default;
         }
