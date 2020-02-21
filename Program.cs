@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+
 namespace Assignment2_CT_Spring2020
 {
     class Program
@@ -22,11 +24,11 @@ namespace Assignment2_CT_Spring2020
             //int sum = MinimumSum(l2);
             //Console.WriteLine(sum);
             //Console.WriteLine();
-            Console.WriteLine("Question 4");
-            string s2 = "Dell";
-            string sortedString = FreqSort(s2);
-            Console.WriteLine(sortedString);
-            Console.WriteLine();
+            //Console.WriteLine("Question 4");
+            //string s2 = "Dell";
+            //string sortedString = FreqSort(s2);
+            //Console.WriteLine(sortedString);
+            //Console.WriteLine();
             //Console.WriteLine("Question 5-Part 1");
             //int[] nums1 = { 1, 2, 2, 1 };
             //int[] nums2 = { 2, 2 };
@@ -39,19 +41,22 @@ namespace Assignment2_CT_Spring2020
             //Console.WriteLine("Part 2- Intersection of two arrays is: ");
             //DisplayArray(intersect2);
             //Console.WriteLine("\n");
-            //Console.WriteLine("Question 6");
-            //char[] arr = new char[] { 'a', 'g', 'h', 'a' };
-            //int k = 3;
-            //Console.WriteLine(ContainsDuplicate(arr, k));
+            //Console.WriteLine();
+            Console.WriteLine("Question 6");
+            char[] arr = new char[] { 'a', 'g', 'h', 'a' };
+            int k = 3;
+            Console.WriteLine(ContainsDuplicate(arr, k));
             //Console.WriteLine("Question 7");
             //int rodLength = 4;
             //int priceProduct = GoldRod(rodLength);
             //Console.WriteLine(priceProduct);
+            //Console.WriteLine();
             //Console.WriteLine("Question 8");
             //string[] userDict = new string[] { "rocky", "usf", "hello", "apple" };
             //string keyword = "hhllo";
             //Console.WriteLine(DictSearch(userDict, keyword));
-            //Console.WriteLine("Question 8");
+            //Console.WriteLine();
+            //Console.WriteLine("Question 9");
             //SolvePuzzle();
         }
 
@@ -167,6 +172,7 @@ namespace Assignment2_CT_Spring2020
                 throw;
             }
         }
+
         public static void DisplayArray(int[] a)
         {
             foreach (int n in a)
@@ -175,39 +181,45 @@ namespace Assignment2_CT_Spring2020
             }
         }
 
-
-       
-        
         public static int[] Intersect1(int[] nums1, int[] nums2)
         {
             try
             {
                 // Write your code here
+
+                int[] arrayQ5a = nums1.Intersect(nums2).ToArray();
+                return arrayQ5a;
             }
             catch
             {
                 throw;
             }
-            return new int[] { };
         }
+
         public static int[] Intersect2(int[] nums1, int[] nums2)
         {
             try
             {
                 // Write your code here
+                int[] arrayQ5b = nums1.Intersect(nums2).ToArray();
+                return arrayQ5b;
             }
             catch
             {
                 throw;
             }
-            return new int[] { };
         }
+
         public static bool ContainsDuplicate(char[] arr, int k)
         {
             try
             {
                 //Write your code here;
-            }
+                int maxNumQ6 = 0;
+                int holdNumQ6 = 0;
+                int differenceQ6 = 0;
+
+            
             catch (Exception)
             {
                 throw;
