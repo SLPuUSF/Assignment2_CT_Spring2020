@@ -17,14 +17,16 @@ namespace Assignment2_CT_Spring2020
             //string rs = StringReverse(s);
             //Console.WriteLine(rs);
             //Console.WriteLine();
-            Console.WriteLine("Question 3");
-            int[] l2 = new int[] { 2, 2, 3, 5, 6 };
-            int sum = MinimumSum(l2);
-            Console.WriteLine(sum);
-            //Console.WriteLine("Question 4");
-            //string s2 = "Dell";
-            //string sortedString = FreqSort(s2);
-            //Console.WriteLine(sortedString);
+            //Console.WriteLine("Question 3");
+            //int[] l2 = new int[] { 2, 2, 3, 5, 6 };
+            //int sum = MinimumSum(l2);
+            //Console.WriteLine(sum);
+            //Console.WriteLine();
+            Console.WriteLine("Question 4");
+            string s2 = "Dell";
+            string sortedString = FreqSort(s2);
+            Console.WriteLine(sortedString);
+            Console.WriteLine();
             //Console.WriteLine("Question 5-Part 1");
             //int[] nums1 = { 1, 2, 2, 1 };
             //int[] nums2 = { 2, 2 };
@@ -143,6 +145,28 @@ namespace Assignment2_CT_Spring2020
                 throw;
             }
         }
+
+        public static string FreqSort(string s2)
+        {
+            try
+            {
+                //Write Your Code Here
+                char[] charArrayQ4 = s2.ToCharArray();
+                int sizeCharArrayQ4 = charArrayQ4.Length;
+                char[] resortCharArrayQ4 = new char[sizeCharArrayQ4];
+                for (int indexQ4 = 0; indexQ4 < sizeCharArrayQ4; indexQ4++)
+                {
+                    resortCharArrayQ4[sizeCharArrayQ4 - 1 - indexQ4] = charArrayQ4[indexQ4];
+                }
+                string resortWordsQ4 = new string(resortCharArrayQ4);
+
+                return resortWordsQ4;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         public static void DisplayArray(int[] a)
         {
             foreach (int n in a)
@@ -153,18 +177,7 @@ namespace Assignment2_CT_Spring2020
 
 
        
-        public static string FreqSort(string s2)
-        {
-            try
-            {
-                //Write Your Code Here
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            return null;
-        }
+        
         public static int[] Intersect1(int[] nums1, int[] nums2)
         {
             try
