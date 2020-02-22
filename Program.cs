@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Assignment2_CT_Spring2020
@@ -215,16 +216,24 @@ namespace Assignment2_CT_Spring2020
             try
             {
                 //Write your code here;
-                int maxNumQ6 = 0;
-                int holdNumQ6 = 0;
-                int differenceQ6 = 0;
+                // Create a new dictionary of int, with char keys. 
+                Dictionary<char, int> myDict = new Dictionary<char, int>();
+                // Scan char[] arr, check whether there is a same letter in the input array and the 
+                //absolute difference of index of these two letter is k.
+                for (int i = 0; i < arr.Length; i++)
+                    if (myDict.ContainsKey(arr[i]) && i - myDict[arr[i]] <= k) 
+                        return true;
+                    // if there isn't any same letter, adding key/value pairs in myDict
+                    // and returen false
+                    else
+                        myDict[arr[i]] = i;    
+                return false;
 
-            
+            }
             catch (Exception)
             {
                 throw;
             }
-            return default;
         }
         public static int GoldRod(int rodLength)
         {
